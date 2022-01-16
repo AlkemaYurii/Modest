@@ -195,7 +195,6 @@ body {
 
 .politics-heading-text {
     width: 390px;
-    align-items: flex-end;
     font-size: 16px;
     color: #a9aaad;
     font-weight: 400;
@@ -204,30 +203,36 @@ body {
 
 .team {
     padding: 80px 0;
-    height: 100%;
 }
 
 .team-title {
     margin-bottom: 60px;
 }
-.team-member {
+.team-member-photo {
+    position: relative; 
+}
+.member-photo {
+    height: 100%;
+    width: 100%;
+}
+.white-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+.team-member-social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    height: 300px;
-    align-items: center;
-    justify-content: center
 }
-.first-team-member {
-    background: url(blog/first-member.png) center no-repeat; 
-}
-.second-team-member {
-    background: url(blog/second-member.png) center no-repeat; 
-}
-.thrid-team-member {
-    background: url(blog/thrid-member.png) center no-repeat; 
-}
-.fourth-team-member {
-    background: url(blog/fourth-member.png) center no-repeat; 
-}
+
 .member-social {
     margin: 2px;
     background-color: #3a454d;
@@ -237,10 +242,8 @@ body {
 .member-social:hover {
     background-color: #4e5a62;
 }
-
 .team-member-info {
     padding: 20px;
-    width: 100%;
     background-color: #e1e6ea;
 }
 
@@ -254,8 +257,8 @@ body {
     font-size: 14px;
     color: #8d8f92;
 }
-.member:hover .team-member {
-    background-color: rgba(255, 255, 255, 0.9);
+.member:hover .white-background {
+    display: block;
 }
 .member:hover .member-social {
     display: block;
@@ -268,3 +271,163 @@ body {
     color: white;
 }
 
+.work {
+    color: white;
+    background-color: #3a454d;
+    padding: 80px 0;
+}
+.images {
+    position: relative;
+    padding-bottom: 20px;
+}
+.image {
+    width: 100%;
+}
+.plus-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+    height: 205px;
+    line-height: 205px;
+    width: 100%;
+    background-color: transparent;
+}
+.plus-background img {
+    line-height: 205px;
+}
+.images-text {
+    position: absolute;
+    bottom: 29px;
+    background-color: #1d2126;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    display: none;
+}
+.images:hover .plus-background {
+    display: block;
+}
+.images:hover .images-text {
+    display: block;
+}
+.images:hover .image {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.work-button {
+    text-align: center;
+    padding-top: 40px;
+}
+.show-button {
+    width: 150px;
+}
+.what-we-do {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.what-we-do-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 80px;
+
+}
+.what-we-do-info-heading {
+    padding: 30px 0;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.what-we-do-info-text {
+    text-align: center;
+    font-size: 15px;
+    color: #a9aaad;
+    font-weight: 400;
+}
+.features {
+    color: white;
+    background-color: #3a454d;
+    padding: 80px 0;
+}
+.features-section-heading {
+    text-transform: uppercase;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.features-section-text {
+    font-size: 16px;
+    font-weight: 300;
+    color: #dcdfe1;
+}
+.stay-in-touch {
+    padding-top: 80px;
+}
+.map {
+    padding-bottom: 60px;
+}
+.stay-in-touch-heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+}
+.stay-in-touch-text {
+    margin: 40px 0;
+    font-size: 16px;
+    color: #a9aaad;
+    font-weight: 400;
+}
+.stay-in-touch-bold-text {
+    font-weight: 900;
+}
+.send-massage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.send-massage-button {
+    position: absolute;
+    bottom: 45px;
+    left:30px;
+    margin-right: 10px;
+    height: 45px;
+    width: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.send-massage-button:hover {
+    color: white;
+    border-color: #23b7a4;
+    background-color: #23b7a4;
+}
+.footer {
+    color: white;
+    background-color: #3a454d;
+    padding: 40px 0;
+}
+.footer-social{
+    display: flex;
+    justify-content: flex-end
+}
+.copyright {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+}
